@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using LibraryApi.Data.Book;
 
 namespace LibraryApi
 {
@@ -26,6 +27,7 @@ namespace LibraryApi
             services.AddControllers();
             services.AddScoped<IAuthorData, MockAuthorData>();
             services.AddScoped<IEditorialData, MockEditorialData>();
+            services.AddScoped<IBookData, MockBookData>();
             services.AddSwaggerGen();
         }
 

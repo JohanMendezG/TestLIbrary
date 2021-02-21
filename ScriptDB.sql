@@ -34,10 +34,10 @@ Title VARCHAR(50) NOT NULL,
 [Year] INT NOT NULL,
 Genre VARCHAR(20) NOT NULL,
 NumberPage INT NOT NULL,
-Id_Editorial INT NOT NULL,
-Id_Author INT NOT NULL,
-FOREIGN KEY(Id_Editorial) REFERENCES Editorials(Id),
-FOREIGN KEY(Id_Author) REFERENCES Authors(Id),
+EditorialId INT NOT NULL,
+AuthorId INT NOT NULL,
+FOREIGN KEY(EditorialId) REFERENCES Editorials(Id),
+FOREIGN KEY(AuthorId) REFERENCES Authors(Id),
 )
 GO
 

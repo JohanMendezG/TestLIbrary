@@ -49,13 +49,13 @@ namespace LibraryApi.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Post([FromBody] Authors authors)
+        public ActionResult Post([FromBody] Authors author)
         {
             try
             {
-                authorData.AddAuthor(authors);
-                return Created($"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}{HttpContext.Request.Path}/{authors.Id}",
-                    authors);
+                authorData.AddAuthor(author);
+                return Created($"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}{HttpContext.Request.Path}/{author.Id}",
+                    author);
             }
             catch (Exception ex)
             {
@@ -63,14 +63,14 @@ namespace LibraryApi.Controllers
             }
         }
         [HttpPut]
-        public ActionResult Put([FromBody] Authors authors)
+        public ActionResult Put([FromBody] Authors author)
         {
             try
             {
-                var existingAuthor = authorData.GetAuthor(authors.Id);
+                var existingAuthor = authorData.GetAuthor(author.Id);
                 if (existingAuthor != null)
-                    authorData.EditAuthor(authors);
-                return Ok(authors);
+                    authorData.EditAuthor(author);
+                return Ok(author);
             }
             catch (Exception ex)
             {

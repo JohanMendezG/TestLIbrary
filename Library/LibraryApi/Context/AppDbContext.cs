@@ -7,5 +7,6 @@ namespace LibraryApi.Context
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<Authors> Authors { get; set; }
+        public DbSet<Editorials> Editorials { get; set; }
     }
 }

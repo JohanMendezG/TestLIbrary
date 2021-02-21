@@ -1,4 +1,5 @@
 using LibraryApi.AuthorData;
+using LibraryApi.EditorialsData;
 using LibraryApi.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,6 +25,7 @@ namespace LibraryApi
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
             services.AddControllers();
             services.AddScoped<IAuthorData, MockAuthorData>();
+            services.AddScoped<IEditorialData, MockEditorialData>();
             services.AddSwaggerGen();
         }
 

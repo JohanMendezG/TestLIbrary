@@ -1,5 +1,6 @@
-﻿using LibraryApi.EditorialsData;
+﻿using LibraryApi.Data.Editorial;
 using LibraryApi.Entities;
+using LibraryApi.Entities.RequestModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -44,7 +45,7 @@ namespace LibraryApi.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Post([FromBody] Editorials editorial)
+        public ActionResult Post([FromBody] RequestEditorial editorial)
         {
             try
             {
@@ -58,7 +59,7 @@ namespace LibraryApi.Controllers
             }
         }
         [HttpPut]
-        public ActionResult Put([FromBody] Editorials editorial)
+        public ActionResult Put([FromBody] RequestEditorial editorial)
         {
             try
             {

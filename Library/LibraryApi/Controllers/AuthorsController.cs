@@ -1,12 +1,8 @@
-﻿using LibraryApi.AuthorData;
-using LibraryApi.Context;
-using LibraryApi.Entities;
+﻿using LibraryApi.Data.Author;
+using LibraryApi.Entities.RequestModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LibraryApi.Controllers
 {
@@ -49,7 +45,7 @@ namespace LibraryApi.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Post([FromBody] Authors author)
+        public ActionResult Post([FromBody] RequestAuthors author)
         {
             try
             {
@@ -63,7 +59,7 @@ namespace LibraryApi.Controllers
             }
         }
         [HttpPut]
-        public ActionResult Put([FromBody] Authors author)
+        public ActionResult Put([FromBody] RequestAuthors author)
         {
             try
             {

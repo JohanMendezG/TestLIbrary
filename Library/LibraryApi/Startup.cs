@@ -1,5 +1,5 @@
-using LibraryApi.AuthorData;
-using LibraryApi.EditorialsData;
+using LibraryApi.Data.Author;
+using LibraryApi.Data.Editorial;
 using LibraryApi.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
